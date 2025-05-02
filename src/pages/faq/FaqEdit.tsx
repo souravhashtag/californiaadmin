@@ -48,7 +48,7 @@ const FaqEdit: React.FC = () => {
   }
 
   return (
-    <>
+    <div className="our_pnl common_wrp">
       <Form form={form} layout="vertical" onFinish={handleSubmit}>
         <Row gutter={[16, 16]}>
           <Col span={24}>
@@ -75,7 +75,7 @@ const FaqEdit: React.FC = () => {
         <Row>
           <Col span={4}>
             <Form.Item>
-              <Button type="primary" htmlType="submit">
+              <Button className="cssbuttons-io-button" type="primary" htmlType="submit">
                 Update
               </Button>
             </Form.Item>
@@ -83,7 +83,7 @@ const FaqEdit: React.FC = () => {
         </Row>
       </Form>
       <Outlet />
-    </>
+    </div>
   );
 };
 

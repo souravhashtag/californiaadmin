@@ -24,8 +24,9 @@ const AboutUs: React.FC<inputType> = ({
 }) => {
     return(
         <>
-            {console.log("formData====>",formData)}
+     
             <h1>About Us Section</h1>
+            <div className="about_pnl">
             <Row
             gutter={[16, 16]}
             align="middle"
@@ -116,7 +117,7 @@ const AboutUs: React.FC<inputType> = ({
 
             
             </Row>
-            
+            </div>
         </>
     )
 }

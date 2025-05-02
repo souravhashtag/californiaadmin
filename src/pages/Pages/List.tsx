@@ -3,6 +3,7 @@ import { Table, Button, message, Spin } from "antd";
 import { useNavigate } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 import { ListPages } from "../../config/apiFunctions"; 
+import { DeleteOutlined, EditOutlined, SearchOutlined } from "@ant-design/icons";
 
 const List: React.FC = () => {
     const navigate = useNavigate();
@@ -51,8 +52,8 @@ const List: React.FC = () => {
         title: "Actions",
         key: "actions",
         render: (_: any, record: any) => (
-          <Button type="link" onClick={() => handleEdit(record.pageslug)}>
-            Edit
+          <Button className='edit_btn' type="link" onClick={() => handleEdit(record.pageslug)}>
+            <EditOutlined /> Edit
           </Button>
         ),
       },
@@ -63,11 +64,11 @@ const List: React.FC = () => {
     );
     
     return (
-        <>
+        <div className='common_wrp searchpnl'>
             <h1>Pages List</h1>
-            <Button type="primary" onClick={handleCreate} style={{ marginBottom: "20px" }}>
+            {/* <Button className='cssbuttons-io-button' type="primary" onClick={handleCreate} style={{ marginBottom: "20px" }}>
                 Create New Page
-            </Button>
+            </Button> */}
             {loading ? (
                 <Spin size="large" />
                 ) : (
@@ -83,7 +84,7 @@ const List: React.FC = () => {
                 />
             )}
             <Outlet />
-        </>
+        </div>
     );
 };
 

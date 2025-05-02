@@ -52,7 +52,9 @@ const SeoUpdate: React.FC = () => {
     };
 
     return (
-        <Form layout="vertical" form={form} onFinish={handleSubmit}>
+        <div className="add_seo common_wrp">
+
+                <Form layout="vertical" form={form} onFinish={handleSubmit}>
             <Row gutter={[16, 16]} align="middle">
                 <Col span={12}>
                     <Form.Item
@@ -100,13 +102,14 @@ const SeoUpdate: React.FC = () => {
             <Row gutter={[16, 16]} align="middle">
                 <Col span={4}>
                     <Form.Item>
-                        <Button type="primary" htmlType="submit">
+                        <Button className="cssbuttons-io-button" type="primary" htmlType="submit">
                             Update
                         </Button>
                     </Form.Item>
                 </Col>
             </Row>
         </Form>
+        </div>
     );
 };
 

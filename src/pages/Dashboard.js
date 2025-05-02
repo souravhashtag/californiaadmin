@@ -5,6 +5,7 @@ import { FaImage } from "react-icons/fa";
 import { FaBlog } from "react-icons/fa";
 import { ListBlog, listGallery, ListPages } from "../config/apiFunctions";
 import CountUp from "react-countup";
+import { Link } from "react-router-dom";
 const { Title } = Typography;
 
 
@@ -41,7 +42,11 @@ const Dashboard = () => {
             >
               <div>
                 <Title level={5}>Pages</Title>
-                <Title level={4}><CountUp end={pageCount} duration={1.2} separator="," /></Title>
+                <Title level={4}>
+                  <Link to='/pages'>
+                     <CountUp end={pageCount} duration={1.2} separator="," />
+                  </Link>
+                  </Title>
               </div>
               <div className="icons">
                 <FaFileAlt />
@@ -61,7 +66,11 @@ const Dashboard = () => {
             >
               <div>
                 <Title level={5}>Media</Title>
-                <Title level={4}><CountUp end={mediaCount} duration={1.2} separator="," /></Title>
+                <Title level={4}>
+                    <Link to='/pages'>
+                        <CountUp end={mediaCount} duration={1.2} separator="," />
+                    </ Link >
+                  </Title>
               </div>
               <div className="icons">
                 <FaImage />
@@ -81,7 +90,11 @@ const Dashboard = () => {
             >
               <div>
                 <Title level={5}>Blog</Title>
-                <Title level={4}><CountUp end={blogCount} duration={1.2} separator="," /></Title>
+                <Title level={4}>
+                    <Link to='/pages'>
+                      <CountUp end={blogCount} duration={1.2} separator="," />
+                    </ Link >
+                  </Title>
               </div>
               <div className="icons">
                 <FaBlog />

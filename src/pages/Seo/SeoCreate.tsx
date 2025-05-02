@@ -34,11 +34,12 @@ const SeoCreate: React.FC = ({}) => {
         }
     return(
         <>
+      <div className="add_seo common_wrp">
             <Form layout="vertical" onFinish={handleSubmit}>
                 <Row                                    
                     gutter={[16, 16]}
                     align="middle"
-                    style={{ marginBottom: "10px", display: "flex", flexWrap: "nowrap" }}
+                    style={{ display: "flex", flexWrap: "nowrap" }}
                 >
                     <Col span={12}>
                         <Form.Item label="Select Page"  name="page" style={{ marginBottom: 0 }}
@@ -115,11 +116,12 @@ const SeoCreate: React.FC = ({}) => {
                 >
                     <Col span={4}>
                         <Form.Item>
-                            <Button type="primary" htmlType="submit">Submit</Button>
+                            <Button className="cssbuttons-io-button" type="primary" htmlType="submit">Submit</Button>
                         </Form.Item>
                     </Col>                        
                 </Row>
             </Form>
+            </div>
         </>
     )
 }

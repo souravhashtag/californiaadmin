@@ -17,7 +17,7 @@ import SeoList from './pages/Seo/SeoList';
 import FaqList from './pages/faq/FaqList';
 import FaqCreate from './pages/faq/FaqCreate';
 import FaqEdit from './pages/faq/FaqEdit';
-import './Style.css';
+import '../src/App.css';
 const AppContent: React.FC = () => {
   const navigate = useNavigate();  
 

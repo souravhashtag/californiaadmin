@@ -22,6 +22,7 @@ const OurVehicles: React.FC<vehicleData> = ({
         <>
         {/* {console.log("ourvehicles======",ourvehicles)} */}
             <h1>Our Vehicles Section</h1>
+            <div className="our_fleet">
             {
             ourvehicles?.map((val:any,index:number)=>
             <>
@@ -145,7 +146,9 @@ const OurVehicles: React.FC<vehicleData> = ({
                     ))}
                     
                 </>
+           
             )}
+                 </div>
         </>
     );
 }

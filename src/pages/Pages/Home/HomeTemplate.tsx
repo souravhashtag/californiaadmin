@@ -497,6 +497,7 @@ const HomeTemplate: React.FC = () => {
   },[])
   return (
     <>
+        <div className="common_wrp line_wrp">
       <h1 style={{ marginBottom: "20px" }}>Page</h1>
       <Form layout="vertical" onFinish={handleSubmit}>
         <Slider
@@ -529,7 +530,7 @@ const HomeTemplate: React.FC = () => {
           PhotoGalInputChangeArray={PhotoGalInputChangeArray}
          />
         <Form.Item>
-          <Button type="primary" htmlType="submit">Submit</Button>
+          <Button className="cssbuttons-io-button" type="primary" htmlType="submit">Submit</Button>
         </Form.Item>
       </Form>
       <GalleryModal
@@ -542,7 +543,7 @@ const HomeTemplate: React.FC = () => {
             maxupload={maxupload}
             form={form}
         />
-        
+        </div>
     </>
   );
 };

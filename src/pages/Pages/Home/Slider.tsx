@@ -43,7 +43,9 @@ const Slider: React.FC<SliderProps> = ({
   return (
     <>
         <h1>Slider Section</h1>
-        {sliderData.map((val: InputBox, index) => (
+    
+    <div className="sec_wrap">
+    {sliderData.map((val: InputBox, index) => (
             <Row
             key={val.id}
             gutter={[16, 16]}
@@ -131,6 +133,7 @@ const Slider: React.FC<SliderProps> = ({
             </Col>
             </Row>
         ))}
+    </div>
         
     </>
   );

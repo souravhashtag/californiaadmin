@@ -64,6 +64,7 @@ const PhotoGallery: React.FC<GalleryData> = ({
             <h1>Gallery Section</h1>
             {                
                 <>
+                   <div className="our_gallery">
                     <Row
                         
                         gutter={[16, 16]}
@@ -125,7 +126,7 @@ const PhotoGallery: React.FC<GalleryData> = ({
                             </Col>
                         </Row>
                     ))}
-
+</div>
                 </>
             }
         </>

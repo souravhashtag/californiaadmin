@@ -73,9 +73,9 @@ const Gallery: React.FC = () => {
       };
     return(
         <>
-            <div className="blog-list">
+            <div className="blog-list common_wrp">
                 <h1>Gallery</h1>
-                <Button type="primary" onClick={openAddGalPopup}  style={{ marginBottom: "20px" }}>
+                <Button className="cssbuttons-io-button" type="primary" onClick={openAddGalPopup}  style={{ marginBottom: "20px" }}>
                     Add New Gallery
                 </Button>
 

@@ -4,6 +4,7 @@ import { PaperClipOutlined } from "@ant-design/icons";
 import { ListSeo } from "../../../src/config/apiFunctions";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { DeleteOutlined, EditOutlined, SearchOutlined } from "@ant-design/icons";
 
 const SeoList: React.FC = ({}) => {
     const [seoList,setSeoList]=useState<any[]>([])
@@ -37,17 +38,17 @@ const SeoList: React.FC = ({}) => {
             title: "Actions",
             key: "actions",
             render: (_:any, record:any) => (
-            <Button type="link" onClick={() => handleEdit(record._id)}>
-                Edit
+            <Button className='edit_btn' type="link" onClick={() => handleEdit(record._id)}>
+                       <EditOutlined /> Edit
             </Button>
             ),
         },
     ];
     return(
         <>
-            <div className="blog-list">
+            <div className="searchpnl blog-list common_wrp">
                 <h1>Seo</h1>
-                <Button type="primary"  style={{ marginBottom: "20px" }}>
+                <Button className="cssbuttons-io-button" type="primary"  style={{ marginBottom: "20px" }}>
                     <Link to="/seo/create">Add Seo</Link>
                 </Button>
                 {loading ? (

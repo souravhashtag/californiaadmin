@@ -23,7 +23,7 @@ const FaqCreate: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="faq_sec_wrap common_wrp">
       <Form layout="vertical" onFinish={handleSubmit}>
         <Row gutter={[16, 16]}>
           <Col span={24}>
@@ -63,14 +63,14 @@ const FaqCreate: React.FC = () => {
         <Row>
           <Col span={4}>
             <Form.Item>
-              <Button type="primary" htmlType="submit">
+              <Button className="cssbuttons-io-button" type="primary" htmlType="submit">
                 Submit
               </Button>
             </Form.Item>
           </Col>
         </Row>
       </Form>
-    </>
+    </div>
   );
 };
 

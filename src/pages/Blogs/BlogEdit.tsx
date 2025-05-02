@@ -185,7 +185,7 @@ const EditBlog: React.FC = () => {
   } as any;
 
   return (
-    <div className="blog-edit">
+    <div className="blog-edit common_wrp blog-create">
       <h1>Edit Blog</h1>
       <Form
         name="edit-blog"
@@ -359,7 +359,7 @@ const EditBlog: React.FC = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit" loading={loading} style={{ width: "100%" }}>
+          <Button className="cssbuttons-io-button" type="primary" htmlType="submit" loading={loading} style={{ width: "100%" }}>
             Update Blog
           </Button>
         </Form.Item>

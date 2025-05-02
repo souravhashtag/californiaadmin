@@ -116,7 +116,7 @@ const BlogCreate = () => {
   };
 
   return (
-    <div className="blog-create">
+    <div className="blog-create common_wrp">
       <h1>Create a New Blog</h1>
       <Form
         name="create-blog"
@@ -286,7 +286,7 @@ const BlogCreate = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit" loading={loading} style={{ width: "100%" }}>
+          <Button className="cssbuttons-io-button" type="primary" htmlType="submit" loading={loading} style={{ width: "100%" }}>
             Create Blog
           </Button>
         </Form.Item>

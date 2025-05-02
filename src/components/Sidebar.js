@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout, Menu } from "antd";
-import { Link,useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   DashboardOutlined,
   ReadOutlined,
@@ -8,27 +8,18 @@ import {
   FileTextOutlined,
   SearchOutlined,
   QuestionCircleOutlined,
-  LogoutOutlined
+
 } from "@ant-design/icons";
 
 const { Sider } = Layout;
 
 const Sidebar = () => {
-  const navigate = useNavigate();
   
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("refreshToken");
-    
-    navigate("/login");
-  };
   return (
-    <Sider >
-      <div style={{ height: "64px", color: "#fff", textAlign: "center", lineHeight: "64px" }}>
+    <Sider className="admin_sidebar">
+      <div style={{ color: "#fff", textAlign: "center", lineHeight: "64px" }}>
         <img 
-          src={`${process.env.REACT_APP_IMAGE_URL}1744262744114-logo.png`} 
-          style={{ height: "60px", width: '150px' }} 
-          alt="Logo"
+          src={`${process.env.REACT_APP_IMAGE_URL}1744262744114-logo.png`} alt="Logo"
         />
       </div>
       
@@ -59,15 +50,7 @@ const Sidebar = () => {
           </Menu.Item>
         </Menu>
         
-        <Menu theme="dark" mode="inline">
-          <Menu.Item 
-            key="7" 
-            icon={<LogoutOutlined />} 
-            onClick={handleLogout}
-          >
-            Logout
-          </Menu.Item>
-        </Menu>
+
       </div>
     </Sider>
   );

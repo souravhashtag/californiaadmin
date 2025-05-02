@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Table, Button, message, Spin, Switch, Popconfirm } from "antd";
 import { useNavigate } from 'react-router-dom';
 import { ListFaq, updateFaq, deleteFaq } from "../../config/apiFunctions"; // Ensure deleteFaq exists
+import { DeleteOutlined, EditOutlined, SearchOutlined } from "@ant-design/icons";
 
 const List: React.FC = () => {
   const navigate = useNavigate();
@@ -89,8 +90,9 @@ const List: React.FC = () => {
       title: "Actions",
       key: "actions",
       render: (_: any, record: any) => (
-        <>
-          <Button type="link" onClick={() => handleEdit(record._id)}>
+        <div className='action_btn common_wrp'>
+          <Button className='edit_btn' type="link" onClick={() => handleEdit(record._id)} >
+                 <EditOutlined />
             Edit
           </Button>
           <Popconfirm
@@ -98,20 +100,23 @@ const List: React.FC = () => {
             onConfirm={() => handleDelete(record._id)}
             okText="Yes"
             cancelText="No"
+            
           >
-            <Button type="link" danger>
-              Delete
+            <Button className='dlt_btn' type="link" danger>
+   
+            <DeleteOutlined /> Delete
             </Button>
           </Popconfirm>
-        </>
+        </div>
       ),
     },
   ];
 
   return (
     <>
+    <div className='common_wrp'>
       <h1>FAQ List</h1>
-      <Button type="primary" onClick={handleCreate} style={{ marginBottom: "20px" }}>
+      <Button className="cssbuttons-io-button" type="primary" onClick={handleCreate} style={{ marginBottom: "20px" }}>
         Create FAQ
       </Button>
       {loading ? (
@@ -124,6 +129,7 @@ const List: React.FC = () => {
           pagination={false}
         />
       )}
+      </div>
     </>
   );
 };

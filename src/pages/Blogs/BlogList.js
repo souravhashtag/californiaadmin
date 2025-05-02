@@ -133,13 +133,14 @@ const BlogList = () => {
   };
 
   return (
-    <div className="blog-list">
+    <div className="blog-list common_wrp searchpnl">
       <h1>Blog List</h1>
       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 20 }}>
-        <Button type="primary" onClick={handleCreate}>
+        <Button type="primary" onClick={handleCreate} className="cssbuttons-io-button">
           Create New Blog
         </Button>
         <Input.Search
+  
           placeholder="Search blogs..."
           value={searchText}
           onChange={handleSearch}
